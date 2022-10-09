@@ -59,8 +59,9 @@
 		</dependency>
 
 		<dependency>
+			<!-- view API docs at http://localhost:8080/v3/api-docs and http://localhost:8080/swagger-ui/index.html -->
 			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>  <!-- view API docs at http://localhost:8080/v3/api-docs -->
+			<artifactId>springdoc-openapi-ui</artifactId>  
 			<version>1.6.11</version>
 		</dependency>
 	</dependencies>
