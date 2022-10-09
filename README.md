@@ -42,3 +42,8 @@ You can keep working on your Exercise 3.2 project, or start with the `ex3.2-solu
 	@Id
 	@GeneratedValue(strategy = GenerationType.INDENTITY)
 	private int id;
+
+5. Create a new `SpringRestController` class and add REST API methods to it
+
+6. Run the Spring Boot app and send HTTP requests using Postman or Insomnia
+
