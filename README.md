@@ -18,48 +18,42 @@ You can keep working on your Exercise 3.2 project, or start with the `ex3.2-solu
 
 1. Add Spring Boot Web starter and Dev Tools to `pom.xml` dependencies:
     ```
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-    ```
-    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
 2. Run Maven > Update project
 
 3. Edit `schema.sql` and make `video_categories.id` an `identity` field: 
     ```
-	CREATE TABLE video_categories (
-	  id identity primary key,  -- auto-generated key
-    ```
+    CREATE TABLE video_categories (
+      id identity primary key,  -- auto-generated key
 
 4. Add a generation strategy to the `VideoCategory` `id` field:
-
     ```
-	@Id
-	@GeneratedValue(strategy = GenerationType.INDENTITY)
-	private int id;
-    ```
+    @Id
+    @GeneratedValue(strategy = GenerationType.INDENTITY)
+    private int id;
 
 5. Create a new `SpringRestController` class and add REST API methods to it
 
 6. Run the Spring Boot app and send HTTP requests using Postman or Insomnia
 
 7. To view the database directly:
-	* Browse to `http://localhost:8080/h2-console`
-	* Change the JDBC URL to `jdbc:h2:mem:testdb`
-	* Click `Connect`
-	* Enter SQL queries in the SQL Statement text box:
+    * Browse to `http://localhost:8080/h2-console`
+    * Change the JDBC URL to `jdbc:h2:mem:testdb`
+    * Click `Connect`
+    * Enter SQL queries in the SQL Statement text box:
         ```
-		select * from users;
-		select * from user_roles;
-        ```
-	* Click the Run button or press `Ctrl-Enter`
+        select * from users;
+        select * from user_roles;
 
-
+    * Click the Run button or press `Ctrl-Enter`
