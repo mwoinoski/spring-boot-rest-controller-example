@@ -6,7 +6,7 @@ This directory contains four projects related to Spring Boot REST APIs:
 1. `rest-controller-basic` - `SpringRestController.java` defines a bare-bones CRUD REST controller for `User` and `UserRole`
 2. `rest-controller-handle-errors` - adds exception handling
 3. `rest-controller-http-statuses` - sets HTTP response statuses appropriately
-4. `rest-controller-solution` - solution to the optional exercise below
+4. `ex5.3-solution_rest-controller` - solution to the optional hands-on exercise below
 
 ## Optional Hands-On Exercise
 
