@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.learningtree.spring</groupId>
-	<artifactId>ex3.2-solution-boot-jpa-rest-controller</artifactId>
+	<artifactId>ex5.3-solution_rest-controller</artifactId>
 	<version>1.0.0</version>
-	<name>ex3.2-solution-boot-jpa-rest-controller</name>
-	<description>Spring Boot Data JPA app</description>
+	<name>ex5.3-solution_rest-controller</name>
+	<description>Spring Boot REST API</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
