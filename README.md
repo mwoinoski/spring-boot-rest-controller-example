@@ -30,24 +30,26 @@ You can keep working on your Exercise 3.2 project, or start with the `ex3.2-solu
             <optional>true</optional>
         </dependency>
 
-2. Run Maven > Update project
+2. Right-click the project > Maven > Update project > Ok
 
-3. Edit `schema.sql` and make `video_categories.id` an `identity` field: 
+3. Edit `schema.sql` and change the definition of `video_categories.id` to make it an `identity` column: 
     ```
     CREATE TABLE video_categories (
       id identity primary key,  -- auto-generated key
 
-4. Add a generation strategy to the `VideoCategory` `id` field:
+4. Add a generation strategy to the `VideoCategory` `id` field so the database generates a primary key 
+when you insert a new row in the `video_categories` table:
     ```
     @Id
     @GeneratedValue(strategy = GenerationType.INDENTITY)
     private int id;
 
-5. Create a new `SpringRestController` class and add REST API methods to it
+5. Create a new `SpringRestController` class and add REST API methods to it (hint: copy `SpringRestController.java` 
+from the `rest-controller-basic` project and change datatypes, method names, parameter types and names, etc.)
 
-6. Run the Spring Boot app and send HTTP requests using Postman or Insomnia
+6. Run the Spring Boot app and send HTTP requests to it using Postman or Insomnia
 
-7. To view the database directly:
+7. To view the changes to the data in the H2 database directly:
     * Browse to `http://localhost:8080/h2-console`
     * Change the JDBC URL to `jdbc:h2:mem:testdb`
     * Click `Connect`
